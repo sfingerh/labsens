@@ -5,12 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
   <meta name="description" content="{{ page.description | default: site.description }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 </head>
 <body>
+  <div class="topbar">
+    <div class="topbar-inner">
+      <a class="pucv-brand" href="https://www.pucv.cl/" rel="noopener" target="_blank">
+        <img src="{{ '/assets/img/pucv-escudo-color.png' | relative_url }}" alt="Escudo PUCV" width="36" height="42">
+        <span>Pontificia Universidad Católica de Valparaíso</span>
+      </a>
+    </div>
+  </div>
   <header class="site-header">
-    <a class="logo" href="{{ '/' | relative_url }}">LabSens</a>
-    <nav>
+    <div class="brand">
+      <a class="wordmark" href="{% if page.lang == 'en' %}{{ '/en/' | relative_url }}{% else %}{{ '/' | relative_url }}{% endif %}">Lab<span>Sens</span></a>
+      <span class="brand-sub">{% if page.lang == 'en' %}EIE · PUCV{% else %}EIE · PUCV{% endif %}</span>
+    </div>
+    <nav aria-label="Primary">
       {% assign lang = page.lang | default: 'es' %}
       {% if lang == 'en' %}
       <a href="{{ '/en/' | relative_url }}">Home</a>
@@ -33,9 +47,19 @@
     {{ content }}
   </main>
   <footer class="site-footer">
-    <p>LabSens · Escuela de Ingeniería Eléctrica · PUCV</p>
-    <p>{{ site.address }} · {{ site.phone }}</p>
-    <p><a href="mailto:{{ site.email_fingerhuth }}">{{ site.email_fingerhuth }}</a> · <a href="mailto:{{ site.email_yunge }}">{{ site.email_yunge }}</a></p>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <p class="wordmark small">Lab<span>Sens</span></p>
+        <p>{% if page.lang == 'en' %}Electrical Engineering · PUCV{% else %}Escuela de Ingeniería Eléctrica · PUCV{% endif %}</p>
+        <p>{{ site.address }} · {{ site.phone }}</p>
+        <p><a href="mailto:{{ site.email_fingerhuth }}">{{ site.email_fingerhuth }}</a><br>
+           <a href="mailto:{{ site.email_yunge }}">{{ site.email_yunge }}</a></p>
+      </div>
+      <a class="pucv-footer" href="https://www.pucv.cl/" rel="noopener" target="_blank">
+        <img src="{{ '/assets/img/pucv-escudo-mono.png' | relative_url }}" alt="PUCV" width="48" height="56">
+      </a>
+    </div>
+    <p class="legal">PUCV logo from official Normas Gráficas · LabSens wordmark (text only)</p>
   </footer>
 </body>
 </html>
