@@ -248,3 +248,15 @@ a.card p {
   }
   .hero { padding-top: 2rem; }
 }
+
+
+.project {
+  background: var(--card, #121a2b);
+  border: 1px solid #223049;
+  border-radius: 14px;
+  padding: 1.15rem 1.1rem;
+  margin: 0 0 1rem;
+}
+.project h3 { margin: 0 0 .45rem; font-size: 1.05rem; }
+.project p { margin: 0 0 .55rem; color: var(--muted, #9aa8c0); font-size: .95rem; }
+.project p:last-child { margin-bottom: 0; }
