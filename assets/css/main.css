@@ -260,3 +260,39 @@ a.card p {
 .project h3 { margin: 0 0 .45rem; font-size: 1.05rem; }
 .project p { margin: 0 0 .55rem; color: var(--muted, #9aa8c0); font-size: .95rem; }
 .project p:last-child { margin-bottom: 0; }
+
+/* People */
+.people-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0 2rem;
+}
+.person {
+  background: var(--card, #121a2b);
+  border: 1px solid var(--line, #1f2a40);
+  border-radius: 14px;
+  padding: 1.1rem;
+}
+.person-photo {
+  display: block;
+  width: 100%;
+  max-width: 280px;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 12px;
+  margin: 0 auto 0.9rem;
+}
+.person h2 {
+  margin: 0 0 0.25rem;
+  font-size: 1.15rem;
+  text-align: center;
+}
+.person .role {
+  margin: 0 0 0.75rem;
+  color: var(--muted, #9aa8c0);
+  text-align: center;
+  font-size: 0.95rem;
+}
+.person p { margin: 0 0 0.55rem; font-size: 0.95rem; }
+.person p:last-child { margin-bottom: 0; text-align: center; }
