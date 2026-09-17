@@ -19,4 +19,3 @@ title: Investigación
   <li>FONDEF — Daniel Yunge</li>
   <li>FONDECYT — Daniel Yunge</li>
 </ul>
-<p><em>Detalle de códigos y abstracts: pendiente de completar.</em></p>
