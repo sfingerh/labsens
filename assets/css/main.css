@@ -1,0 +1,50 @@
+:root {
+  --bg: #0b1220;
+  --card: #121a2b;
+  --text: #e8eef8;
+  --muted: #9aa8c0;
+  --accent: #3b82f6;
+  --accent2: #22d3ee;
+  --max: 960px;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: radial-gradient(1200px 600px at 10% -10%, #1e3a5f 0%, var(--bg) 55%);
+  color: var(--text);
+  line-height: 1.55;
+}
+a { color: var(--accent2); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.site-header, .site-footer, .container { max-width: var(--max); margin: 0 auto; padding: 1rem 1.25rem; }
+.site-header { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
+.logo { font-weight: 700; font-size: 1.2rem; color: var(--text); }
+nav { display: flex; gap: .9rem; flex-wrap: wrap; font-size: .95rem; }
+nav a { color: var(--muted); }
+nav a.lang { color: var(--accent); font-weight: 600; }
+.hero {
+  padding: 3.5rem 0 2rem;
+  border-bottom: 1px solid #1f2a40;
+  margin-bottom: 2rem;
+}
+.hero h1 { font-size: clamp(2rem, 4vw, 2.8rem); margin: 0 0 .75rem; letter-spacing: -0.02em; }
+.tagline { color: var(--accent2); font-weight: 600; margin: 0 0 1rem; }
+.lead { color: var(--muted); font-size: 1.1rem; max-width: 42rem; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem 0 2rem; }
+.card {
+  background: var(--card);
+  border: 1px solid #223049;
+  border-radius: 14px;
+  padding: 1.1rem 1rem;
+}
+.card h3 { margin: 0 0 .4rem; font-size: 1.05rem; }
+.card p { margin: 0; color: var(--muted); font-size: .92rem; }
+.cta { display: inline-block; margin-top: 1rem; background: var(--accent); color: white; padding: .7rem 1rem; border-radius: 10px; font-weight: 600; }
+.cta:hover { text-decoration: none; filter: brightness(1.08); }
+.site-footer { margin-top: 3rem; padding-bottom: 2.5rem; color: var(--muted); font-size: .9rem; border-top: 1px solid #1f2a40; }
+.placeholder-hero {
+  height: 160px; border-radius: 16px; margin: 1.25rem 0 0;
+  background: linear-gradient(135deg, #1d4ed8 0%, #0ea5e9 50%, #22d3ee 100%);
+  opacity: .85;
+}

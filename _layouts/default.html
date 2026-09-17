@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'es' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="{{ '/' | relative_url }}">LabSens</a>
+    <nav>
+      {% assign lang = page.lang | default: 'es' %}
+      {% if lang == 'en' %}
+      <a href="{{ '/en/' | relative_url }}">Home</a>
+      <a href="{{ '/en/research/' | relative_url }}">Research</a>
+      <a href="{{ '/en/people/' | relative_url }}">People</a>
+      <a href="{{ '/en/publications/' | relative_url }}">Publications</a>
+      <a href="{{ '/en/contact/' | relative_url }}">Contact</a>
+      <a class="lang" href="{{ '/' | relative_url }}">ES</a>
+      {% else %}
+      <a href="{{ '/' | relative_url }}">Inicio</a>
+      <a href="{{ '/research/' | relative_url }}">Investigación</a>
+      <a href="{{ '/people/' | relative_url }}">Equipo</a>
+      <a href="{{ '/publications/' | relative_url }}">Publicaciones</a>
+      <a href="{{ '/contact/' | relative_url }}">Contacto</a>
+      <a class="lang" href="{{ '/en/' | relative_url }}">EN</a>
+      {% endif %}
+    </nav>
+  </header>
+  <main class="container">
+    {{ content }}
+  </main>
+  <footer class="site-footer">
+    <p>LabSens · Escuela de Ingeniería Eléctrica · PUCV</p>
+    <p>{{ site.address }} · {{ site.phone }}</p>
+    <p><a href="mailto:{{ site.email_fingerhuth }}">{{ site.email_fingerhuth }}</a> · <a href="mailto:{{ site.email_yunge }}">{{ site.email_yunge }}</a></p>
+  </footer>
+</body>
+</html>

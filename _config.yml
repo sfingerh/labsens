@@ -1,0 +1,10 @@
+title: LabSens
+description: Applied sensing & embedded systems at PUCV
+url: "https://sfingerh.github.io"
+baseurl: "/labsens"
+lang: es
+email_fingerhuth: sebastian.fingerhuth@pucv.cl
+email_yunge: daniel.yunge@pucv.cl
+address: "Av. Brasil 2147, Valparaíso, Chile"
+phone: "+56 32 227 3670"
+exclude: [README.md]
